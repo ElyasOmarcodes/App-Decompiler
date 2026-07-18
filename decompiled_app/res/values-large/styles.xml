@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUPLICATE_style_0x7f120062" parent="@style/APKTOOL_DUPLICATE_style_0x7f120060" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120069" parent="@style/APKTOOL_DUPLICATE_style_0x7f120067" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12006e" parent="@style/APKTOOL_DUPLICATE_style_0x7f12006d" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120074" parent="@style/APKTOOL_DUPLICATE_style_0x7f120073" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12007e" parent="@style/APKTOOL_DUPLICATE_style_0x7f12007c" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120088" parent="@style/APKTOOL_DUPLICATE_style_0x7f120086" />
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUPLICATE_style_0x7f120247" parent="@style/APKTOOL_DUPLICATE_style_0x7f120245" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120248" parent="@style/APKTOOL_DUPLICATE_style_0x7f120245" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120249" parent="@style/APKTOOL_DUPLICATE_style_0x7f12024e" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12024a" parent="@style/APKTOOL_DUPLICATE_style_0x7f12024f" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12024b" parent="@style/APKTOOL_DUPLICATE_style_0x7f120250" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12024c" parent="@style/APKTOOL_DUPLICATE_style_0x7f120251" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12024d" parent="@style/APKTOOL_DUPLICATE_style_0x7f12025a" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120269" parent="@style/APKTOOL_DUPLICATE_style_0x7f120261" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12026a" parent="@style/APKTOOL_DUPLICATE_style_0x7f120262" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12026b" parent="@style/APKTOOL_DUPLICATE_style_0x7f120263" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12026c" parent="@style/APKTOOL_DUPLICATE_style_0x7f120264" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12026d" parent="@style/APKTOOL_DUPLICATE_style_0x7f120265" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12026e" parent="@style/APKTOOL_DUPLICATE_style_0x7f120266" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12026f" parent="@style/APKTOOL_DUPLICATE_style_0x7f120267" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120270" parent="@style/APKTOOL_DUPLICATE_style_0x7f120268" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120272" parent="@style/APKTOOL_DUPLICATE_style_0x7f120271" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120280" parent="@style/APKTOOL_DUPLICATE_style_0x7f12027c" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120281" parent="@style/APKTOOL_DUPLICATE_style_0x7f12027d" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120282" parent="@style/APKTOOL_DUPLICATE_style_0x7f12027e" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120283" parent="@style/APKTOOL_DUPLICATE_style_0x7f12027c" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120284" parent="@style/APKTOOL_DUPLICATE_style_0x7f12027e" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120285" parent="@style/APKTOOL_DUPLICATE_style_0x7f120290" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120286" parent="@style/APKTOOL_DUPLICATE_style_0x7f120291" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120287" parent="@style/APKTOOL_DUPLICATE_style_0x7f120292" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120288" parent="@style/APKTOOL_DUPLICATE_style_0x7f120293" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120289" parent="@style/APKTOOL_DUPLICATE_style_0x7f120294" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12028a" parent="@style/APKTOOL_DUPLICATE_style_0x7f120295" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12028b" parent="@style/APKTOOL_DUPLICATE_style_0x7f120296" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12028c" parent="@style/APKTOOL_DUPLICATE_style_0x7f120297" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12028d" parent="@style/APKTOOL_DUPLICATE_style_0x7f120298" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12028e" parent="@style/APKTOOL_DUPLICATE_style_0x7f1202a9" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12028f" parent="@style/APKTOOL_DUPLICATE_style_0x7f1202aa" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f1202af" parent="@style/APKTOOL_DUPLICATE_style_0x7f1202ad" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f1202d2" parent="@style/APKTOOL_DUPLICATE_style_0x7f1202d1" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120419" parent="@style/APKTOOL_DUPLICATE_style_0x7f12041b" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12041e" parent="@style/APKTOOL_DUPLICATE_style_0x7f12041f" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120427" parent="@style/APKTOOL_DUPLICATE_style_0x7f120425" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12042a" parent="@style/APKTOOL_DUPLICATE_style_0x7f120428" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f12046b" parent="@style/APKTOOL_DUPLICATE_style_0x7f120467" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120479" parent="@style/APKTOOL_DUPLICATE_style_0x7f120477" />
+    <style name="APKTOOL_DUPLICATE_style_0x7f120493" parent="@style/APKTOOL_DUPLICATE_style_0x7f120494" />
+</resources>

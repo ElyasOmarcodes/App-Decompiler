@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="MT_Protector">
+        <item quantity="other">File: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100001">
+        <item quantity="other">Folder: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100002">
+        <item quantity="other">%d notifikasi baru</item>
+        <item quantity="one">%d notifikasi baru</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100003">
+        <item quantity="other">%d beberapa hari yang lalu</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100004">
+        <item quantity="other">%d beberapa jam yang lalu</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100005">
+        <item quantity="other">%d beberapa menit yang lalu</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100006">
+        <item quantity="other">%d beberapa detik yang lalu</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100007">
+        <item quantity="other">%d antarmuka lainnya</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100008">
+        <item quantity="other">%d antarmuka terjemahan</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100009">
+        <item quantity="other">%d tugas sedang berjalan</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000a">
+        <item quantity="other">%d sesi</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000b">
+        <item quantity="other">VIP kedaluwarsa dalam %d hari</item>
+    </plurals>
+</resources>

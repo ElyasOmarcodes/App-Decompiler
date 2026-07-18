@@ -1,0 +1,16 @@
+.class public interface abstract Ll/ۜ۠;
+.super Ljava/lang/Object;
+.source "65XT"
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# virtual methods
+.method public abstract ۛ()V
+.end method
+
+.method public abstract ۥ()V
+.end method

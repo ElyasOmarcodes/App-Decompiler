@@ -1,0 +1,93 @@
+.class public final Ll/۫۫ۜ;
+.super Landroid/util/Property;
+.source "O65I"
+
+
+# instance fields
+.field public ۥ:Landroid/graphics/Rect;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 2
+    const-class v0, Landroid/graphics/PointF;
+
+    const-string v1, "boundsOrigin"
+
+    .line 70
+    invoke-direct {p0, v0, v1}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+
+    .line 71
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Ll/۫۫ۜ;->ۥ:Landroid/graphics/Rect;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    .line 70
+    check-cast p1, Landroid/graphics/drawable/Drawable;
+
+    iget-object v0, p0, Ll/۫۫ۜ;->ۥ:Landroid/graphics/Rect;
+
+    .line 82
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
+
+    .line 83
+    new-instance p1, Landroid/graphics/PointF;
+
+    iget v1, v0, Landroid/graphics/Rect;->left:I
+
+    int-to-float v1, v1
+
+    iget v0, v0, Landroid/graphics/Rect;->top:I
+
+    int-to-float v0, v0
+
+    invoke-direct {p1, v1, v0}, Landroid/graphics/PointF;-><init>(FF)V
+
+    return-object p1
+.end method
+
+.method public final set(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
+
+    .line 70
+    check-cast p1, Landroid/graphics/drawable/Drawable;
+
+    check-cast p2, Landroid/graphics/PointF;
+
+    iget-object v0, p0, Ll/۫۫ۜ;->ۥ:Landroid/graphics/Rect;
+
+    .line 75
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
+
+    .line 76
+    iget v1, p2, Landroid/graphics/PointF;->x:F
+
+    invoke-static {v1}, Ljava/lang/Math;->round(F)I
+
+    move-result v1
+
+    iget p2, p2, Landroid/graphics/PointF;->y:F
+
+    invoke-static {p2}, Ljava/lang/Math;->round(F)I
+
+    move-result p2
+
+    invoke-virtual {v0, v1, p2}, Landroid/graphics/Rect;->offsetTo(II)V
+
+    .line 77
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    return-void
+.end method

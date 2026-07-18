@@ -1,0 +1,32 @@
+{
+    name: ["HTML", ".html", ".htm"]
+    comment: {startsWith: "<!--", endsWith: "-->"}
+    contains: [
+        {
+            start: {match: "<\\??([^/>\\s]+)", 1: "tagName"}
+            end: {match: "[?/]?>|$"}
+            contains: [
+                {match: /(?s)<!--.*?(-->|$)/, 0: "comment"}
+                {match: /(xmlns:)([^='"\s]+)/, 1: "attrName", 2: "namespace"}
+                {match: /(?:([^='"<\/>\s]+)(:))?([^='"<\/>\s]+)/, 1: "namespace", 2: "attrName", 3: "attrName"}
+                {match: /=/, 0: "string"}
+				{
+				    start: {match: /"/}
+				    end: {match: /"/}
+				    color: "string"
+				}
+				{
+                    start: {match: /'/}
+                    end: {match: /'/}
+                    color: "string"
+                }
+            ]
+        }
+        {
+            match: "</\\s*([^>\\s]+)\\s*>", 1: "tagName"
+        }
+        // todo sub-language support
+    ]
+    codeFormatter: #BUILT_IN_HTML_FORMATTER#
+    codeShrinker: #BUILT_IN_HTML_SHRINKER#
+}

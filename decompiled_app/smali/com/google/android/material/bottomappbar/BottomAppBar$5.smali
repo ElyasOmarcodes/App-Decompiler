@@ -1,0 +1,54 @@
+.class public Lcom/google/android/material/bottomappbar/BottomAppBar$5;
+.super Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;
+.source "8237"
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
+
+.field public final synthetic val$targetMode:I
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;I)V
+    .locals 0
+
+    .line 2
+    iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
+
+    .line 4
+    iput p2, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->val$targetMode:I
+
+    .line 907
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onHidden(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    .locals 2
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->this$0:Lcom/google/android/material/bottomappbar/BottomAppBar;
+
+    .line 4
+    iget v1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar$5;->val$targetMode:I
+
+    .line 910
+    invoke-static {v0, v1}, Lcom/google/android/material/bottomappbar/BottomAppBar;->access$1900(Lcom/google/android/material/bottomappbar/BottomAppBar;I)F
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setTranslationX(F)V
+
+    .line 911
+    new-instance v0, Lcom/google/android/material/bottomappbar/BottomAppBar$5$1;
+
+    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomAppBar$5$1;-><init>(Lcom/google/android/material/bottomappbar/BottomAppBar$5;)V
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->show(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;)V
+
+    return-void
+.end method

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="MT_Protector">
+        <item quantity="one">Файл: %d</item>
+        <item quantity="few">Файл: %d</item>
+        <item quantity="many">Файли: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100001">
+        <item quantity="one">Тека: %d</item>
+        <item quantity="few">Теки: %d</item>
+        <item quantity="many">Теки: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100002">
+        <item quantity="other">%d нового сповіщення</item>
+        <item quantity="one">%d нове сповіщення</item>
+        <item quantity="few">%d нові сповіщення</item>
+        <item quantity="many">%d нових сповіщень</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100003">
+        <item quantity="one">%d день тому</item>
+        <item quantity="few">%d дня тому</item>
+        <item quantity="many">%d днів тому</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100004">
+        <item quantity="one">%d годину тому</item>
+        <item quantity="few">%d години тому</item>
+        <item quantity="many">%d годин тому</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100005">
+        <item quantity="one">%d хвилину тому</item>
+        <item quantity="few">%d хвилини тому</item>
+        <item quantity="many">%d хвилин тому</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100006">
+        <item quantity="one">%d секунду тому</item>
+        <item quantity="few">%d секунди тому</item>
+        <item quantity="many">%d секунд тому</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100007">
+        <item quantity="one">%d інтерфейс</item>
+        <item quantity="few">%d інтерфейс</item>
+        <item quantity="many">%d інтерфейс</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100008">
+        <item quantity="one">%d перекладач</item>
+        <item quantity="few">%d перекладач</item>
+        <item quantity="many">%d перекладач</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100009">
+        <item quantity="one">%d завдання виконується</item>
+        <item quantity="few">%d завдань виконується</item>
+        <item quantity="many">%d завдань виконується</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000a">
+        <item quantity="one">%d сесія</item>
+        <item quantity="few">%d сесії</item>
+        <item quantity="many">%d сесій</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000b">
+        <item quantity="one">VIP закінчується через %d день</item>
+        <item quantity="few">VIP закінчується через %d днів</item>
+        <item quantity="many">VIP закінчується через %d днів</item>
+    </plurals>
+</resources>

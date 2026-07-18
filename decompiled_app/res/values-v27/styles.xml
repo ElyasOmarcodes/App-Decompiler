@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUPLICATE_style_0x7f120013" parent="@style/APKTOOL_DUPLICATE_style_0x7f12000e">
+        <item name="android:navigationBarColor">@color/APKTOOL_DUPLICATE_color_0x7f060332</item>
+        <item name="android:windowLightStatusBar">@bool/APKTOOL_DUPLICATE_bool_0x7f050004</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f0400ed">@color/APKTOOL_DUPLICATE_color_0x7f060331</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040110">@color/APKTOOL_DUPLICATE_color_0x7f060332</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040112">@color/APKTOOL_DUPLICATE_color_0x7f060332</item>
+    </style>
+    <style name="APKTOOL_DUPLICATE_style_0x7f120130" parent="@style/APKTOOL_DUPLICATE_style_0x7f12025a">
+        <item name="android:navigationBarColor">#ff303030</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="APKTOOL_DUPLICATE_style_0x7f120131" parent="@style/APKTOOL_DUPLICATE_style_0x7f12024d">
+        <item name="android:navigationBarColor">@color/APKTOOL_DUPLICATE_color_0x7f060317</item>
+        <item name="android:windowLightNavigationBar">@bool/APKTOOL_DUPLICATE_bool_0x7f050004</item>
+    </style>
+    <style name="APKTOOL_DUPLICATE_style_0x7f120132" parent="@style/APKTOOL_DUPLICATE_style_0x7f120254">
+        <item name="android:navigationBarColor">#fffafafa</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f0404ec">false</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f0404f5">true</item>
+    </style>
+</resources>

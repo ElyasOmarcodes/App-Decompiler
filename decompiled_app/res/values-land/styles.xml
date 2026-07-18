@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="APKTOOL_DUPLICATE_style_0x7f120371" parent="@style/APKTOOL_DUPLICATE_style_0x7f12010d">
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040439">APKTOOL_DUPLICATE_id_0x7f0900ad</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040446">APKTOOL_DUPLICATE_id_0x7f090162</item>
+    </style>
+    <style name="APKTOOL_DUPLICATE_style_0x7f12045b" parent="@style/APKTOOL_DUPLICATE_style_0x7f120363">
+        <item name="android:textAppearance">?APKTOOL_DUPLICATE_attr_0x7f040468</item>
+        <item name="android:textColor">?APKTOOL_DUPLICATE_attr_0x7f0400fe</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">start|center|top</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">@integer/APKTOOL_DUPLICATE_integer_0x7f0a0031</item>
+    </style>
+    <style name="APKTOOL_DUPLICATE_style_0x7f12045e" parent="@style/APKTOOL_DUPLICATE_style_0x7f120125">
+        <item name="android:layout_gravity">start|bottom|center</item>
+    </style>
+</resources>

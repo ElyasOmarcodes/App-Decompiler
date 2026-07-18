@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="MT_Protector">
+        <item quantity="other">檔案: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100001">
+        <item quantity="other">資料夾: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100002">
+        <item quantity="other">%d 則新通知</item>
+        <item quantity="one">%d 則新通知</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100003">
+        <item quantity="other">%d 天前</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100004">
+        <item quantity="other">%d 小時前</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100005">
+        <item quantity="other">%d 分鐘前</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100006">
+        <item quantity="other">%d 秒前</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100007">
+        <item quantity="other">%d 個其它介面</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100008">
+        <item quantity="other">%d 個翻譯介面</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100009">
+        <item quantity="other">%d 個工作正在運作</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000a">
+        <item quantity="other">%d 個對話</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000b">
+        <item quantity="other">VIP特權將於%d天後逾期</item>
+    </plurals>
+</resources>

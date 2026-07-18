@@ -1,0 +1,92 @@
+.class public Lorg/simpleframework/xml/core/OverrideValue;
+.super Ljava/lang/Object;
+.source "7A99"
+
+# interfaces
+.implements Lorg/simpleframework/xml/strategy/Value;
+
+
+# instance fields
+.field public final type:Ljava/lang/Class;
+
+.field public final value:Lorg/simpleframework/xml/strategy/Value;
+
+
+# direct methods
+.method public constructor <init>(Lorg/simpleframework/xml/strategy/Value;Ljava/lang/Class;)V
+    .locals 0
+
+    .line 51
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/simpleframework/xml/core/OverrideValue;->value:Lorg/simpleframework/xml/strategy/Value;
+
+    iput-object p2, p0, Lorg/simpleframework/xml/core/OverrideValue;->type:Ljava/lang/Class;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getLength()I
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideValue;->value:Lorg/simpleframework/xml/strategy/Value;
+
+    .line 97
+    invoke-interface {v0}, Lorg/simpleframework/xml/strategy/Value;->getLength()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getType()Ljava/lang/Class;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideValue;->type:Ljava/lang/Class;
+
+    return-object v0
+.end method
+
+.method public getValue()Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideValue;->value:Lorg/simpleframework/xml/strategy/Value;
+
+    .line 64
+    invoke-interface {v0}, Lorg/simpleframework/xml/strategy/Value;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public isReference()Z
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideValue;->value:Lorg/simpleframework/xml/strategy/Value;
+
+    .line 108
+    invoke-interface {v0}, Lorg/simpleframework/xml/strategy/Value;->isReference()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setValue(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideValue;->value:Lorg/simpleframework/xml/strategy/Value;
+
+    .line 75
+    invoke-interface {v0, p1}, Lorg/simpleframework/xml/strategy/Value;->setValue(Ljava/lang/Object;)V
+
+    return-void
+.end method

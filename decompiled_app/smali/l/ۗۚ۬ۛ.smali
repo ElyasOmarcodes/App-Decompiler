@@ -1,0 +1,12 @@
+.class public interface abstract Ll/ۗۚ۬ۛ;
+.super Ljava/lang/Object;
+.source "5ANE"
+
+# interfaces
+.implements Ll/ۖۚ۬ۛ;
+.implements Ll/ۧۚ۬ۛ;
+
+
+# virtual methods
+.method public abstract ۥ()V
+.end method

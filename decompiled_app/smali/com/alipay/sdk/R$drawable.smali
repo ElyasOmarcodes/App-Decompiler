@@ -1,0 +1,38 @@
+.class public final Lcom/alipay/sdk/R$drawable;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static notification_action_background:I = 0x7f0801bd
+
+.field public static notification_bg:I = 0x7f0801be
+
+.field public static notification_bg_low:I = 0x7f0801bf
+
+.field public static notification_bg_low_normal:I = 0x7f0801c0
+
+.field public static notification_bg_low_pressed:I = 0x7f0801c1
+
+.field public static notification_bg_normal:I = 0x7f0801c2
+
+.field public static notification_bg_normal_pressed:I = 0x7f0801c3
+
+.field public static notification_icon_background:I = 0x7f0801c4
+
+.field public static notification_template_icon_bg:I = 0x7f0801c6
+
+.field public static notification_template_icon_low_bg:I = 0x7f0801c7
+
+.field public static notification_tile_bg:I = 0x7f0801c9
+
+.field public static notify_panel_notification_icon_bg:I = 0x7f0801ca
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

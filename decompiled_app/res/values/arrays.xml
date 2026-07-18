@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="MT_Protector">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030001">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030002">
+        <item>Xml</item>
+        <item>String</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030003">
+        <item>Xml</item>
+        <item>Resource Id</item>
+        <item>String</item>
+        <item>Integer</item>
+        <item>Color</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030004">
+        <item>String</item>
+        <item>Reference</item>
+        <item>Attribute</item>
+        <item>Color</item>
+        <item>Int-dec</item>
+        <item>Int-hex</item>
+        <item>Boolean</item>
+        <item>Float</item>
+        <item>Dimension</item>
+        <item>Fraction</item>
+        <item>DynamicReference</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030005">
+        <item>Xml</item>
+        <item>String</item>
+        <item>Resource Id</item>
+        <item>Color</item>
+        <item>Integer</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030006">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110132</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110133</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110134</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110135</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110136</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030007">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110132</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110133</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110134</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110135</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030008">
+        <item>Auto</item>
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030009">
+        <item>Copy as Hex Text</item>
+        <item>Copy as Decimal Text</item>
+        <item>Copy as Binary Text</item>
+        <item>Copy as Ascii</item>
+        <item>Copy as Base64</item>
+        <item>Copy as SHA1</item>
+        <item>Copy as MD5</item>
+        <item>Copy as CRC32</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03000a">
+        <item>yyyy-MM-dd HH:mm:ss</item>
+        <item>dd-MM-yyyy HH:mm:ss</item>
+        <item>HH:mm:ss dd-MM-yyyy</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03000b">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1101e7</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1101e4</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03000c">
+        <item>Smali</item>
+        <item>String</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03000d">
+        <item>Smali</item>
+        <item>Class name</item>
+        <item>Field name</item>
+        <item>Method name</item>
+        <item>String</item>
+        <item>Integer</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03000e">
+        <item>Method Declaration</item>
+        <item>Field Declaration</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03000f">
+        <item>Application name</item>
+        <item>Package name</item>
+        <item>Apk file size</item>
+        <item>Install time</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030010">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110259</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1103d4</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f11066f</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030011">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Big</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030012">
+        <item>Find all usages</item>
+        <item>Find the usages of put</item>
+        <item>Find the usages of get</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030013">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102d7</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102d1</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102e1</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102e6</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102d6</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102dd</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102e2</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102e0</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102e5</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102de</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102e3</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102df</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102e4</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102d5</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102d2</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030014">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110351</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110352</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110353</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110354</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030015">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110370</item>
+        <item>Azərbaycan</item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Türk</item>
+        <item>Indonesia</item>
+        <item>Беларуская</item>
+        <item>Русский</item>
+        <item>Українська</item>
+        <item>中文（简体）</item>
+        <item>中文（繁體）</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030016">
+        <item>auto</item>
+        <item>az</item>
+        <item>en</item>
+        <item>es</item>
+        <item>tr</item>
+        <item>in</item>
+        <item>be</item>
+        <item>ru</item>
+        <item>uk</item>
+        <item>zh-rCN</item>
+        <item>zh-rTW</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030017">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f11038b</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1103d4</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f110673</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030018">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102f5</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102f4</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1102f6</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030019">
+        <item>Home</item>
+        <item>Last path</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001a">
+        <item>Paste from Hex Text</item>
+        <item>Paste from Decimal Text</item>
+        <item>Paste from Binary Text</item>
+        <item>Paste from Ascii</item>
+        <item>Paste from Base64</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001b">
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1105fc</item>
+        <item>@string/APKTOOL_DUPLICATE_string_0x7f1105fd</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001c">
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001d">
+        <item>Normal</item>
+        <item>Monospace</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001e">
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001f">
+        <item>Replace All</item>
+        <item>Update and replace</item>
+        <item>Skip All</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030020">
+        <item>Store</item>
+        <item>Fastest</item>
+        <item>Fast</item>
+        <item>Normal</item>
+        <item>Maximum</item>
+        <item>Ultra</item>
+        <item>APK mode</item>
+    </string-array>
+</resources>

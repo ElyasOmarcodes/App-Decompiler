@@ -1,0 +1,62 @@
+.class public Lcom/google/android/material/button/MaterialButtonToggleGroup$2;
+.super Ll/ۦ۫ۛ;
+.source "71P6"
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/material/button/MaterialButtonToggleGroup;)V
+    .locals 0
+
+    .line 2
+    iput-object p1, p0, Lcom/google/android/material/button/MaterialButtonToggleGroup$2;->this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+
+    .line 265
+    invoke-direct {p0}, Ll/ۦ۫ۛ;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Ll/ۨ۠۬;)V
+    .locals 6
+
+    .line 269
+    invoke-super {p0, p1, p2}, Ll/ۦ۫ۛ;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Ll/ۨ۠۬;)V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButtonToggleGroup$2;->this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+
+    .line 274
+    invoke-static {v2, p1}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->access$100(Lcom/google/android/material/button/MaterialButtonToggleGroup;Landroid/view/View;)I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    check-cast p1, Lcom/google/android/material/button/MaterialButton;
+
+    .line 277
+    invoke-virtual {p1}, Lcom/google/android/material/button/MaterialButton;->isChecked()Z
+
+    move-result v5
+
+    .line 271
+    invoke-static/range {v0 .. v5}, Ll/ۛ۠۬;->ۥ(IIIIZZ)Ll/ۛ۠۬;
+
+    move-result-object p1
+
+    .line 270
+    invoke-virtual {p2, p1}, Ll/ۨ۠۬;->ۥ(Ll/ۛ۠۬;)V
+
+    return-void
+.end method

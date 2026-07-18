@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="MT_Protector">
+        <item quantity="other">Dosyalar: %d</item>
+        <item quantity="one">Dosya: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100001">
+        <item quantity="other">Klasörler: %d</item>
+        <item quantity="one">Klasör: %d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100002">
+        <item quantity="other">%d yeni bildirim</item>
+        <item quantity="one">%d yeni bildirim</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100003">
+        <item quantity="other">%d gün önce</item>
+        <item quantity="one">%d günler önce</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100004">
+        <item quantity="other">%d saatler önce</item>
+        <item quantity="one">%d saat önce</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100005">
+        <item quantity="other">%d dakikalar önce</item>
+        <item quantity="one">%d dakika önce</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100006">
+        <item quantity="other">%d saniyeler önce</item>
+        <item quantity="one">%d saniye önce</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100007">
+        <item quantity="other">%d diğer arayüzler</item>
+        <item quantity="one">%d diğer arayüz</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100008">
+        <item quantity="other">%d çeviri arayüzleri</item>
+        <item quantity="one">%d çeviri arayüzü</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f100009">
+        <item quantity="other">%d görevler çalışıyor</item>
+        <item quantity="one">%d görev çalışıyor</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000a">
+        <item quantity="other">%d oturumlar</item>
+        <item quantity="one">%d oturum</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f10000b">
+        <item quantity="other">VIP süresi %d günler içinde doluyor</item>
+        <item quantity="one">VIP süresi %d gün içinde doluyor</item>
+    </plurals>
+</resources>

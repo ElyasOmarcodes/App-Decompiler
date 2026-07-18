@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="bin.mt.plus.canary" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER"/>
+    <permission android:name="bin.mt.plus.canary.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="bin.mt.plus.canary.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <queries>
+        <intent>
+            <action android:name="*"/>
+            <data android:scheme="tbopen"/>
+        </intent>
+        <package android:name="com.eg.android.AlipayGphone"/>
+        <package android:name="com.eg.android.AlipayGphoneRC"/>
+        <package android:name="hk.alipay.wallet"/>
+        <package android:name="hk.alipay.walletRC"/>
+    </queries>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23"/>
+    <application android:allowBackup="true" android:alwaysRetainTaskState="true" android:appComponentFactory="l.ۖۨۛ" android:extractNativeLibs="true" android:fullBackupContent="true" android:icon="@mipmap/MT_Protector" android:label="@string/APKTOOL_DUPLICATE_string_0x7f110061" android:largeHeap="true" android:name="l.ۛۙ۫" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:roundIcon="@mipmap/APKTOOL_DUPLICATE_mipmap_0x7f0f0003" android:supportsRtl="false" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f12000d" android:usesCleartextTraffic="true">
+        <meta-data android:name="UMENG_CHANNEL" android:value="Default"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:name="bin.mt.plus.Main" android:windowSoftInputMode="adjustResize"/>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/APKTOOL_DUPLICATE_mipmap_0x7f0f0002" android:name="bin.mt.plus.MainNoBgIcon" android:roundIcon="@mipmap/APKTOOL_DUPLICATE_mipmap_0x7f0f0002" android:targetActivity="bin.mt.plus.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/APKTOOL_DUPLICATE_mipmap_0x7f0f0001" android:name="bin.mt.plus.MainDarkIcon" android:roundIcon="@mipmap/APKTOOL_DUPLICATE_mipmap_0x7f0f0001" android:targetActivity="bin.mt.plus.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="true" android:exported="true" android:icon="@mipmap/MT_Protector" android:name="bin.mt.plus.MainLightIcon" android:roundIcon="@mipmap/MT_Protector" android:targetActivity="bin.mt.plus.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:exported="true" android:name="bin.mt.plus.OpenFileActivity" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f120018">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.EDIT"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/xml"/>
+                <data android:mimeType="application/x-7z-compressed"/>
+                <data android:mimeType="application/vnd.debian.binary-package"/>
+                <data android:mimeType="application/arj"/>
+                <data android:mimeType="application/x-bzip2"/>
+                <data android:mimeType="application/bzip2"/>
+                <data android:mimeType="application/vnd.ms-cab-compressed"/>
+                <data android:mimeType="application/vnd.ms-htmlhelp"/>
+                <data android:mimeType="application/x-cpio"/>
+                <data android:mimeType="application/cpio"/>
+                <data android:mimeType="application/x-gzip"/>
+                <data android:mimeType="application/gzip"/>
+                <data android:mimeType="application/iso"/>
+                <data android:mimeType="application/lzh"/>
+                <data android:mimeType="application/lzma"/>
+                <data android:mimeType="application/x-rar-compressed"/>
+                <data android:mimeType="application/rar"/>
+                <data android:mimeType="application/x-gzip"/>
+                <data android:mimeType="application/gzip"/>
+                <data android:mimeType="application/x-tar"/>
+                <data android:mimeType="application/tar"/>
+                <data android:mimeType="application/wim"/>
+                <data android:mimeType="application/xar"/>
+                <data android:mimeType="application/x-xz"/>
+                <data android:mimeType="application/xz"/>
+                <data android:mimeType="application/ntfs"/>
+                <data android:mimeType="application/udf"/>
+                <data android:mimeType="application/z"/>
+                <data android:mimeType="application/x-sh"/>
+                <data android:mimeType="application/x-rc"/>
+                <data android:mimeType="application/zip"/>
+                <data android:mimeType="application/apk.1"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.SEND"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:name="l.۬ۥۢ" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f12000d"/>
+        <activity android:configChanges="orientation|screenSize|uiMode" android:label="@string/APKTOOL_DUPLICATE_string_0x7f110520" android:name="l.ۛۧۢ" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f12001a"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۨۘۢ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۟ۘۢ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/APKTOOL_DUPLICATE_string_0x7f1106da" android:name="bin.mt.edit2.TextEditor" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۫ۡ۠" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۡۦ۠" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize|uiMode" android:name="l.ۧۜ۠"/>
+        <activity android:configChanges="orientation|screenSize" android:name="l.ۡۙۤ"/>
+        <activity android:configChanges="orientation|screenSize" android:name="l.ۧ۬ۤ"/>
+        <activity android:configChanges="orientation|screenSize" android:name="l.ۡۛۤ"/>
+        <activity android:configChanges="orientation|screenSize" android:name="l.۬ۛۧ"/>
+        <activity android:configChanges="orientation|screenSize" android:name="l.۬۟ۚ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۟ۤ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۠ۚ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۥ۠۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۦۨ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۥۜ۫" android:screenOrientation="fullSensor" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۡۨ۫" android:screenOrientation="fullSensor" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۜۜ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۚۦ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="l.۫ۦ۫" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="mtplugin"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۬ۦ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۬ۘ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۡ۠۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۠ۜ۠" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۘ۬ۛۥ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۤۨ۠" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۦۚ۠" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۫ۜ۠"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۘ۠ۢ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۟۬ۚ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۘ۟ۚ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۟ۥۤ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۢۗۚ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۧۛۤ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۧۛۚ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۙ۟ۢ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۥۨۛۥ" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f120013"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۬ۡ۫"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۘۨۢ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۗۧۢ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۚۥۢ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۘۗۘ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۗ۟ۚ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.۟ۙ۫" android:noHistory="true" android:taskAffinity="bin.mt.plus.canary.ArscQuery" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f120018"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۦۙ۫" android:noHistory="true" android:taskAffinity="bin.mt.plus.canary.ArscQuery"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="l.ۙۛۛۥ" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f120013" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="l.۬ۨ۬ۥ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:name="l.۟ۧۥۥ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۛۘۥۥ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۫ۗ۫"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۨۛۢ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/APKTOOL_DUPLICATE_string_0x7f11027d" android:name="l.ۖ۟ۢ" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۨۜۗ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۦۗۚ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۥۗۚ" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۛۗ۫" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۚۖۢ" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <provider android:authorities="bin.mt.plus.canary.fp" android:exported="false" android:grantUriPermissions="true" android:name="l.ۗۡۘ"/>
+        <activity android:name="l.ۡۢۥۥ" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:foregroundServiceType="specialUse" android:name="l.ۢۢۥۥ">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="TaskManager"/>
+        </service>
+        <service android:foregroundServiceType="specialUse" android:name="l.ۚۖۙ">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="StreamingServer"/>
+        </service>
+        <service android:foregroundServiceType="specialUse" android:name="l.۫ۚۤۛ">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="FTPServer"/>
+        </service>
+        <service android:foregroundServiceType="mediaProjection" android:name="l.ۙۗۖ"/>
+        <service android:name="l.ۜۙ۫"/>
+        <service android:foregroundServiceType="specialUse" android:name="l.ۜۨۛۥ">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Terminal"/>
+        </service>
+        <service android:name="l.ۜۗۘ"/>
+        <activity android:name="l.۬ۗۘ" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="l.ۤ۬۠" android:process=":d"/>
+        <service android:exported="true" android:label="@string/APKTOOL_DUPLICATE_string_0x7f110024" android:name="l.ۖۢۖ" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/MT_Protector"/>
+        </service>
+        <service android:name="l.ۢۧۥۥ" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:launchMode="singleTop" android:name="bin.mt.plus.WXPayEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity-alias android:exported="true" android:name="bin.mt.plus.canary.wxapi.WXPayEntryActivity" android:targetActivity="bin.mt.plus.WXPayEntryActivity"/>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="bin.mt.plus.TenpayCallbackActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="qwallet1105061912"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent101492915"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTop" android:name="l.ۖۡۢ" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity-alias android:exported="true" android:name="bin.mt.plus.canary.wxapi.WXEntryActivity" android:targetActivity="l.ۖۡۢ"/>
+        <provider android:authorities="bin.mt.plus.canary.shizuku" android:enabled="true" android:exported="true" android:multiprocess="false" android:name="l.ۥ۫ۤۛ" android:permission="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+        <provider android:authorities="bin.mt.plus.canary.androidx-startup" android:exported="false" android:name="l.۠ۙۜ">
+            <meta-data android:name="l.ۘۥۨ" android:value="androidx.startup"/>
+            <meta-data android:name="l.ۧۡۨ" android:value="androidx.startup"/>
+            <meta-data android:name="l.ۖ۟ۜ" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleInstance" android:name="com.alipay.sdk.app.PayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTask" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.alipay.sdk.app.H5OpenAuthActivity" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.alipay.sdk.app.APayEntranceActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="moe.shizuku.client.V3_SUPPORT" android:value="true"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="l.ۨ۟ۜ" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

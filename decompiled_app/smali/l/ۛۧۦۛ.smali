@@ -1,0 +1,84 @@
+.class public final Ll/ۛۧۦۛ;
+.super Ljava/util/AbstractCollection;
+.source "65DV"
+
+
+# instance fields
+.field public final synthetic ۤۥ:Ll/۬ۧۦۛ;
+
+
+# direct methods
+.method public constructor <init>(Ll/۬ۧۦۛ;)V
+    .locals 0
+
+    .line 2
+    iput-object p1, p0, Ll/ۛۧۦۛ;->ۤۥ:Ll/۬ۧۦۛ;
+
+    .line 205
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    .line 2
+    iget-object v0, p0, Ll/ۛۧۦۛ;->ۤۥ:Ll/۬ۧۦۛ;
+
+    .line 209
+    iget-object v1, v0, Ll/۬ۧۦۛ;->ۧۥ:Ll/ۚۗ۟ۥ;
+
+    .line 210
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    iget-object v0, v0, Ll/۬ۧۦۛ;->۬ۛ:Ll/ۚۗ۟ۥ;
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Ll/ۜۢ۟ۥ;->ۥ(Ljava/util/Iterator;Ljava/util/Iterator;)Ll/ۜۢ۟ۥ;
+
+    move-result-object v0
+
+    .line 211
+    invoke-static {}, Ll/ۨۛۦۥ;->ۛ()Ll/ۨۛۦۥ;
+
+    move-result-object v1
+
+    .line 209
+    invoke-static {v0, v1}, Ll/ۦۥۦۥ;->ۥ(Ljava/lang/Iterable;Ljava/util/Comparator;)Ll/ۘ۬ۦۥ;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 2
+
+    .line 2
+    iget-object v0, p0, Ll/ۛۧۦۛ;->ۤۥ:Ll/۬ۧۦۛ;
+
+    .line 216
+    iget-object v1, v0, Ll/۬ۧۦۛ;->ۧۥ:Ll/ۚۗ۟ۥ;
+
+    invoke-interface {v1}, Ljava/util/Set;->size()I
+
+    move-result v1
+
+    iget-object v0, v0, Ll/۬ۧۦۛ;->۬ۛ:Ll/ۚۗ۟ۥ;
+
+    invoke-interface {v0}, Ljava/util/Set;->size()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method

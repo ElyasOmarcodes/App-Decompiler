@@ -1,0 +1,97 @@
+.class public final Ll/ۗۨۦۛ;
+.super Ll/ۥۛ۟ۛ;
+.source "W4K1"
+
+# interfaces
+.implements Ll/ۨۜۦۛ;
+
+
+# instance fields
+.field public final ۘۥ:Ljava/lang/String;
+
+.field public final ۠ۥ:Ljava/lang/String;
+
+.field public final ۤۥ:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 36
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۗۨۦۛ;->ۤۥ:Ljava/lang/String;
+
+    iput-object p2, p0, Ll/ۗۨۦۛ;->۠ۥ:Ljava/lang/String;
+
+    iput-object p3, p0, Ll/ۗۨۦۛ;->ۘۥ:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static ۛ(Ll/ۘۛۦۛ;)Ll/ۗۨۦۛ;
+    .locals 3
+
+    .line 57
+    instance-of v0, p0, Ll/ۗۨۦۛ;
+
+    if-eqz v0, :cond_0
+
+    .line 58
+    check-cast p0, Ll/ۗۨۦۛ;
+
+    return-object p0
+
+    .line 60
+    :cond_0
+    new-instance v0, Ll/ۗۨۦۛ;
+
+    .line 61
+    invoke-interface {p0}, Ll/ۘۛۦۛ;->۬()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 62
+    invoke-interface {p0}, Ll/ۘۛۦۛ;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 63
+    invoke-interface {p0}, Ll/ۘۛۦۛ;->getType()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, v1, v2, p0}, Ll/ۗۨۦۛ;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getName()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Ll/ۗۨۦۛ;->۠ۥ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getType()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Ll/ۗۨۦۛ;->ۘۥ:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final ۬()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Ll/ۗۨۦۛ;->ۤۥ:Ljava/lang/String;
+
+    return-object v0
+.end method

@@ -1,0 +1,148 @@
+.class public final Ll/ۛۢۗۥ;
+.super Ll/ۨۢۗۥ;
+.source "A66A"
+
+# interfaces
+.implements Ll/ۥۜۢۥ;
+
+
+# direct methods
+.method public constructor <init>(Ll/ۥۜۢۥ;JJ)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Ll/ۨۢۗۥ;-><init>(Ll/ۨۜۢۥ;JJ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll/ۥۜۢۥ;JJJJ)V
+    .locals 11
+
+    const/4 v10, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    invoke-direct/range {v0 .. v10}, Ll/ۨۢۗۥ;-><init>(Ll/ۨۜۢۥ;JJJJLl/۬ۢۗۥ;)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$emptyConsumer$0(J)V
+    .locals 0
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic emptyConsumer()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Ll/ۛۢۗۥ;->emptyConsumer()Ljava/util/function/LongConsumer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public emptyConsumer()Ljava/util/function/LongConsumer;
+    .locals 1
+
+    new-instance v0, Ll/ۥۢۗۥ;
+
+    invoke-direct {v0}, Ll/ۥۢۗۥ;-><init>()V
+
+    return-object v0
+.end method
+
+.method public synthetic forEachRemaining(Ljava/util/function/Consumer;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Ll/۫ۨۢۥ;->$default$forEachRemaining(Ll/ۥۜۢۥ;Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic forEachRemaining(Ljava/util/function/LongConsumer;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Ll/ۨۢۗۥ;->forEachRemaining(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public makeSpliterator(Ll/ۥۜۢۥ;JJJJ)Ll/ۥۜۢۥ;
+    .locals 11
+
+    new-instance v10, Ll/ۛۢۗۥ;
+
+    move-object v0, v10
+
+    move-object v1, p1
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    invoke-direct/range {v0 .. v9}, Ll/ۛۢۗۥ;-><init>(Ll/ۥۜۢۥ;JJJJ)V
+
+    return-object v10
+.end method
+
+.method public bridge synthetic makeSpliterator(Ll/ۦۜۢۥ;JJJJ)Ll/ۦۜۢۥ;
+    .locals 0
+
+    check-cast p1, Ll/ۥۜۢۥ;
+
+    invoke-virtual/range {p0 .. p9}, Ll/ۛۢۗۥ;->makeSpliterator(Ll/ۥۜۢۥ;JJJJ)Ll/ۥۜۢۥ;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic tryAdvance(Ljava/util/function/Consumer;)Z
+    .locals 0
+
+    invoke-static {p0, p1}, Ll/۫ۨۢۥ;->$default$tryAdvance(Ll/ۥۜۢۥ;Ljava/util/function/Consumer;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic tryAdvance(Ljava/util/function/LongConsumer;)Z
+    .locals 0
+
+    invoke-super {p0, p1}, Ll/ۨۢۗۥ;->tryAdvance(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic trySplit()Ll/ۥۜۢۥ;
+    .locals 1
+
+    invoke-super {p0}, Ll/ۚۢۗۥ;->trySplit()Ll/ۦۜۢۥ;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۥۜۢۥ;
+
+    return-object v0
+.end method

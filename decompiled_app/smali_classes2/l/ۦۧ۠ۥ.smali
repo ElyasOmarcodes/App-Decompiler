@@ -1,0 +1,17 @@
+.class public interface abstract Ll/ۦۧ۠ۥ;
+.super Ljava/lang/Object;
+.source "I3ZN"
+
+# interfaces
+.implements Ll/ۖۡ۠ۥ;
+
+
+# virtual methods
+.method public abstract getExpression()Ll/۠ۧ۠ۥ;
+.end method
+
+.method public abstract ۘ()Ll/۟ۙ۠ۥ;
+.end method
+
+.method public abstract ۬()Ll/ۖۡ۠ۥ;
+.end method

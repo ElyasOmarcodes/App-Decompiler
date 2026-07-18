@@ -1,0 +1,68 @@
+.class public final Ll/ۧ۫۬;
+.super Ljava/lang/Object;
+.source "VB52"
+
+# interfaces
+.implements Landroid/view/Choreographer$FrameCallback;
+
+
+# instance fields
+.field public final synthetic ۥ:Ll/ۡ۫۬;
+
+
+# direct methods
+.method public constructor <init>(Ll/ۡ۫۬;)V
+    .locals 0
+
+    .line 204
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۧ۫۬;->ۥ:Ll/ۡ۫۬;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final doFrame(J)V
+    .locals 2
+
+    .line 2
+    iget-object p1, p0, Ll/ۧ۫۬;->ۥ:Ll/ۡ۫۬;
+
+    .line 207
+    iget-object p1, p1, Ll/ۖ۫۬;->ۥ:Ll/۠۫۬;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 60
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    iget-object p1, p1, Ll/۠۫۬;->ۥ:Ll/ۙ۫۬;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 61
+    invoke-virtual {p1, v0, v1}, Ll/ۙ۫۬;->ۥ(J)V
+
+    .line 62
+    iget-object p2, p1, Ll/ۙ۫۬;->ۥ:Ljava/util/ArrayList;
+
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    if-lez p2, :cond_0
+
+    .line 63
+    invoke-virtual {p1}, Ll/ۙ۫۬;->ۥ()Ll/ۖ۫۬;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll/ۖ۫۬;->ۥ()V
+
+    :cond_0
+    return-void
+.end method

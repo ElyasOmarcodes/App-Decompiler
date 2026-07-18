@@ -1,0 +1,39 @@
+.class public Ll/ۙۛۖۥ;
+.super Ll/ۚۥۖۥ;
+.source "M449"
+
+
+# direct methods
+.method public constructor <init>(Ll/ۧۥۖۥ;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 312
+    invoke-direct {p0, p1, p2, p3}, Ll/ۚۥۖۥ;-><init>(Ll/ۧۥۖۥ;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public ۥ(Ll/ۨۧۖۥ;Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 0
+
+    const-string p2, "-Xbootclasspath/p:"
+
+    .line 315
+    invoke-virtual {p1, p2}, Ll/ۨۧۖۥ;->۟(Ljava/lang/String;)V
+
+    const-string p2, "-Xbootclasspath/a:"
+
+    .line 316
+    invoke-virtual {p1, p2}, Ll/ۨۧۖۥ;->۟(Ljava/lang/String;)V
+
+    const-string p2, "-bootclasspath"
+
+    .line 317
+    invoke-super {p0, p1, p2, p3}, Ll/۟ۥۖۥ;->ۥ(Ll/ۨۧۖۥ;Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method

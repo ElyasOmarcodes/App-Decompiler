@@ -1,0 +1,49 @@
+.class public final Lcom/umeng/commonsdk/stateless/d$5;
+.super Ljava/lang/Object;
+.source "745C"
+
+# interfaces
+.implements Ljava/io/FilenameFilter;
+
+
+# instance fields
+.field public final synthetic a:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 2
+    iput-object p1, p0, Lcom/umeng/commonsdk/stateless/d$5;->a:Ljava/lang/String;
+
+    .line 459
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public accept(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 0
+
+    .line 2
+    iget-object p1, p0, Lcom/umeng/commonsdk/stateless/d$5;->a:Ljava/lang/String;
+
+    .line 462
+    invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method

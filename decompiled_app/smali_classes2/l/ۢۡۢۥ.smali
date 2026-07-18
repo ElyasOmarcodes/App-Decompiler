@@ -1,0 +1,118 @@
+.class public final Ll/ۢۡۢۥ;
+.super Ljava/lang/Object;
+.source "M672"
+
+# interfaces
+.implements Ll/ۦۗۗۥ;
+
+
+# instance fields
+.field public final emptyValue:Ljava/lang/Object;
+
+.field public final opFlags:I
+
+.field public final presentPredicate:Ljava/util/function/Predicate;
+
+.field public final shape:Ll/۟ۙۗۥ;
+
+.field public final sinkSupplier:Ljava/util/function/Supplier;
+
+
+# direct methods
+.method public constructor <init>(ZLl/۟ۙۗۥ;Ljava/lang/Object;Ljava/util/function/Predicate;Ljava/util/function/Supplier;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget v0, Ll/ۜۙۗۥ;->IS_SHORT_CIRCUIT:I
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    sget p1, Ll/ۜۙۗۥ;->NOT_ORDERED:I
+
+    :goto_0
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ll/ۢۡۢۥ;->opFlags:I
+
+    iput-object p2, p0, Ll/ۢۡۢۥ;->shape:Ll/۟ۙۗۥ;
+
+    iput-object p3, p0, Ll/ۢۡۢۥ;->emptyValue:Ljava/lang/Object;
+
+    iput-object p4, p0, Ll/ۢۡۢۥ;->presentPredicate:Ljava/util/function/Predicate;
+
+    iput-object p5, p0, Ll/ۢۡۢۥ;->sinkSupplier:Ljava/util/function/Supplier;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public evaluateParallel(Ll/ۛۚۗۥ;Ll/ۦۜۢۥ;)Ljava/lang/Object;
+    .locals 2
+
+    sget-object v0, Ll/ۜۙۗۥ;->ORDERED:Ll/ۜۙۗۥ;
+
+    invoke-virtual {p1}, Ll/ۛۚۗۥ;->getStreamAndOpFlags()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ll/ۜۙۗۥ;->isKnown(I)Z
+
+    move-result v0
+
+    new-instance v1, Ll/ۧۙۢۥ;
+
+    invoke-direct {v1, p0, v0, p1, p2}, Ll/ۧۙۢۥ;-><init>(Ll/ۢۡۢۥ;ZLl/ۛۚۗۥ;Ll/ۦۜۢۥ;)V
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public evaluateSequential(Ll/ۛۚۗۥ;Ll/ۦۜۢۥ;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Ll/ۢۡۢۥ;->sinkSupplier:Ljava/util/function/Supplier;
+
+    invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll/ۚۗۗۥ;
+
+    invoke-virtual {p1, v0, p2}, Ll/ۛۚۗۥ;->wrapAndCopyInto(Ll/ۤۖۗۥ;Ll/ۦۜۢۥ;)Ll/ۤۖۗۥ;
+
+    move-result-object p1
+
+    check-cast p1, Ll/ۚۗۗۥ;
+
+    invoke-interface {p1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Ll/ۢۡۢۥ;->emptyValue:Ljava/lang/Object;
+
+    :goto_0
+    return-object p1
+.end method
+
+.method public getOpFlags()I
+    .locals 1
+
+    iget v0, p0, Ll/ۢۡۢۥ;->opFlags:I
+
+    return v0
+.end method

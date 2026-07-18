@@ -1,0 +1,20 @@
+.class public Lcom/umeng/analytics/pro/bl;
+.super Lcom/umeng/analytics/pro/bi;
+.source "O45Z"
+
+
+# instance fields
+.field public final a:Lcom/umeng/analytics/pro/bi;
+
+
+# direct methods
+.method public constructor <init>(BLcom/umeng/analytics/pro/bi;)V
+    .locals 0
+
+    .line 27
+    invoke-direct {p0, p1}, Lcom/umeng/analytics/pro/bi;-><init>(B)V
+
+    iput-object p2, p0, Lcom/umeng/analytics/pro/bl;->a:Lcom/umeng/analytics/pro/bi;
+
+    return-void
+.end method

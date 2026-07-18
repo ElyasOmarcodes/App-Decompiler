@@ -1,0 +1,55 @@
+.class public final synthetic Ll/ۨ۠۠;
+.super Ljava/lang/Object;
+.source "NATV"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic ۠ۥ:I
+
+.field public final synthetic ۤۥ:Ll/ۜ۠۠;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll/ۜ۠۠;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll/ۨ۠۠;->ۤۥ:Ll/ۜ۠۠;
+
+    iput p2, p0, Ll/ۨ۠۠;->۠ۥ:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 2
+    iget-object v0, p0, Ll/ۨ۠۠;->ۤۥ:Ll/ۜ۠۠;
+
+    .line 865
+    iget-object v1, v0, Ll/ۜ۠۠;->ۨ:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    iget v2, p0, Ll/ۨ۠۠;->۠ۥ:I
+
+    if-ne v2, v1, :cond_0
+
+    .line 866
+    iget-object v0, v0, Ll/ۜ۠۠;->۟:Lbin/mt/edit2/TextEditor;
+
+    invoke-static {v0}, Lbin/mt/edit2/TextEditor;->ۧ(Lbin/mt/edit2/TextEditor;)V
+
+    :cond_0
+    return-void
+.end method

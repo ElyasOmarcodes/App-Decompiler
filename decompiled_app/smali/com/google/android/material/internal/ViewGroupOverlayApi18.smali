@@ -1,0 +1,74 @@
+.class public Lcom/google/android/material/internal/ViewGroupOverlayApi18;
+.super Ljava/lang/Object;
+.source "05EZ"
+
+# interfaces
+.implements Lcom/google/android/material/internal/ViewGroupOverlayImpl;
+
+
+# instance fields
+.field public final viewGroupOverlay:Landroid/view/ViewGroupOverlay;
+
+
+# direct methods
+.method public constructor <init>(Landroid/view/ViewGroup;)V
+    .locals 0
+
+    .line 31
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 32
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public add(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
+
+    .line 37
+    invoke-virtual {v0, p1}, Landroid/view/ViewOverlay;->add(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public add(Landroid/view/View;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
+
+    .line 47
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroupOverlay;->add(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public remove(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
+
+    .line 42
+    invoke-virtual {v0, p1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public remove(Landroid/view/View;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
+
+    .line 52
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
+
+    return-void
+.end method

@@ -1,0 +1,34 @@
+.class public final synthetic Ll/ۚۗۧۥ;
+.super Ljava/lang/Object;
+.source "CBOE"
+
+
+# direct methods
+.method public static ۥ(Ll/ۤۗۧۥ;Ljava/util/function/Predicate;)Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 270
+    instance-of v0, p1, Ll/ۨۛۡۥ;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ll/ۨۛۡۥ;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ll/ۦۗۧۥ;
+
+    invoke-direct {v0, p1}, Ll/ۦۗۧۥ;-><init>(Ljava/util/function/Predicate;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p0, p1}, Ll/ۤۗۧۥ;->ۥ(Ll/ۨۛۡۥ;)Z
+
+    move-result p0
+
+    return p0
+.end method
