@@ -45,27 +45,50 @@ def norm_class(name, package):
     return name
 
 
-def find_launcher(root, package):
-    """د MAIN/LAUNCHER intent-filter لرونکی component او د هغه filter مومي."""
+def is_launcher_intent(intent):
+    actions = {a.get(A + "name") for a in intent.findall("action")}
+    cats = {c.get(A + "name") for c in intent.findall("category")}
+    return ("android.intent.action.MAIN" in actions
+            and "android.intent.category.LAUNCHER" in cats)
+
+
+def find_entry_points(root, package):
+    """
+    ټول هغه componentونه مومي چې MAIN/LAUNCHER filter لري (activity یا activity-alias).
+    Returns (application_el, entry_points, target_activity)
+      entry_points = list of (component_el, launcher_intent_el)
+      target_activity = هغه اصلي activity چې اپ یې په پای کې پرانیزي (fully-qualified)
+    """
     app = root.find("application")
     if app is None:
         fail("No <application> element in the manifest.")
 
+    entries = []
     for comp in list(app):
         if comp.tag not in ("activity", "activity-alias"):
             continue
         for intent in comp.findall("intent-filter"):
-            actions = {a.get(A + "name") for a in intent.findall("action")}
-            cats = {c.get(A + "name") for c in intent.findall("category")}
-            if ("android.intent.action.MAIN" in actions
-                    and "android.intent.category.LAUNCHER" in cats):
-                # د پیل کولو هدف: د alias لپاره targetActivity، نه بل د خپل نوم
-                if comp.tag == "activity-alias":
-                    target = comp.get(A + "targetActivity") or comp.get(A + "name")
-                else:
-                    target = comp.get(A + "name")
-                return app, comp, intent, norm_class(target, package)
-    fail("Could not find a MAIN/LAUNCHER activity in the manifest.")
+            if is_launcher_intent(intent):
+                entries.append((comp, intent))
+                break
+    if not entries:
+        fail("Could not find any MAIN/LAUNCHER entry point in the manifest.")
+
+    # د اصلي هدف activity ټاکل: لومړی enabled شوی، بیا لومړی موندل شوی
+    def target_of(comp):
+        if comp.tag == "activity-alias":
+            return comp.get(A + "targetActivity") or comp.get(A + "name")
+        return comp.get(A + "name")
+
+    chosen = None
+    for comp, _ in entries:
+        if comp.get(A + "enabled", "true") != "false":
+            chosen = comp
+            break
+    if chosen is None:
+        chosen = entries[0][0]
+    target = norm_class(target_of(chosen), package)
+    return app, entries, target
 
 
 SMALI_TEMPLATE = r""".class public L__SPLASH_PATH__;
@@ -179,30 +202,44 @@ def main():
     if not package:
         fail("Manifest has no 'package' attribute.")
 
-    app, comp, launcher_intent, target = find_launcher(root, package)
+    app, entries, target = find_entry_points(root, package)
 
     splash_class = package + ".SplashActivity"
-    splash_desc = "L" + splash_class.replace(".", "/") + ";"
+    has_alias = any(comp.tag == "activity-alias" for comp, _ in entries)
 
     print("Package          : " + package)
-    print("Original launcher: " + target)
+    print("Entry points     : "
+          + ", ".join("%s(%s)" % (c.get(A + "name"), c.tag) for c, _ in entries))
+    print("Original target  : " + target)
     print("New splash class : " + splash_class)
+    print("Mode             : " + ("alias-reroute" if has_alias else "launcher-swap"))
 
-    # ۱) د زاړه launcher څخه د LAUNCHER filter لرې کول
-    comp.remove(launcher_intent)
-
-    # ۲) نوی SplashActivity د launcher په توګه زیاتول
     splash_el = ET.SubElement(app, "activity")
     splash_el.set(A + "name", splash_class)
-    splash_el.set(A + "exported", "true")
-    # که زوړ launcher icon/label درلود، هماغه وساتو
-    for attr in (A + "label", A + "icon", A + "theme"):
-        if comp.get(attr):
-            splash_el.set(attr, comp.get(attr))
 
-    intent = ET.SubElement(splash_el, "intent-filter")
-    ET.SubElement(intent, "action").set(A + "name", "android.intent.action.MAIN")
-    ET.SubElement(intent, "category").set(A + "name", "android.intent.category.LAUNCHER")
+    if has_alias:
+        # د آیکون-سویچر aliasونه ساتو: یوازې د هغوی هدف Splash ته اړوو.
+        # Splash بیا اصلي activity پرانیزي. د launcher filter اړتیا نشته.
+        for comp, _ in entries:
+            if comp.tag == "activity-alias":
+                comp.set(A + "targetActivity", splash_class)
+            else:
+                # که کوم plain-activity هم launcher وي، د هغه filter لرې کوو
+                comp.remove(_)
+        splash_el.set(A + "exported", "false")
+    else:
+        # هیڅ alias نشته: د زړو launcherونو filter لرې، Splash ته launcher ورکوو.
+        donor = entries[0][0]
+        for comp, launcher_intent in entries:
+            comp.remove(launcher_intent)
+        splash_el.set(A + "exported", "true")
+        for attr in (A + "label", A + "icon", A + "roundIcon", A + "theme"):
+            if donor.get(attr):
+                splash_el.set(attr, donor.get(attr))
+        intent = ET.SubElement(splash_el, "intent-filter")
+        ET.SubElement(intent, "action").set(A + "name", "android.intent.action.MAIN")
+        ET.SubElement(intent, "category").set(A + "name",
+                                              "android.intent.category.LAUNCHER")
 
     tree.write(manifest_path, encoding="utf-8", xml_declaration=True)
     print("Manifest updated : " + manifest_path)
