@@ -19,6 +19,32 @@ A simple setup to decompile APK files using **Apktool** via **GitHub Actions**.
 
 ---
 
+## 🎬 د اسپلش سکرین سره کمپایل (Build with a splash screen)
+
+د **"Build APK with Splash Screen"** workflow ټول کار پخپله کوي:
+
+۱. **Actions** ټب → **"Build APK with Splash Screen"** → **Run workflow**
+   - `splash_text`: د اسپلش متن
+   - `delay_ms`: د اسپلش وخت (ملي‌ثانیه)
+۲. Workflow دا کارونه کوي: ډیکامپایل → اسپلش ور زیاتول → بیا کمپایل → alignment → لاسلیک.
+۳. کله چې پای ته ورسیږي، لاندې artifactونه ډاونلوډ کړئ:
+   - **`app-with-splash-signed`** — لاسلیک شوی APK چې مستقیم نصبیږي.
+   - **`app-with-splash-unsigned-aligned`** — که غواړئ **په خپل کلید** یې لاسلیک کړئ.
+   - **`decompiled_app-with-splash`** — بدل‌شوی سورس کوډ.
+
+> د اسپلش کوډ په `.github/scripts/add_splash.py` کې دی. دا سکریپټ پخپله د اپ
+> package او اصلي (launcher) activity کشف کوي، بیا یو `SplashActivity` جوړوي
+> چې څو ثانیې ښکاري او بیا اصلي اپ پرانیزي.
+
+**په خپل کلید بیا لاسلیک (sign with your own key):**
+```bash
+zipalign -p -f 4 app.apk aligned.apk   # که اړتیا وي
+apksigner sign --ks my.keystore --ks-key-alias mykey --out my-signed.apk aligned.apk
+apksigner verify --verbose my-signed.apk
+```
+
+---
+
 ## 📂 مهم فایلونه چیرته دي؟ (Where are the important files?)
 
 د ډیکامپایل وروسته، دننه د `decompiled_app/` فولډر کې:

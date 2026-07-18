@@ -1,0 +1,126 @@
+name: Build APK with Splash Screen
+
+# دا workflow: APK ډیکامپایل کوي -> اسپلش سکرین ور زیاتوي -> بیرته کمپایل کوي -> لاسلیک کوي
+# Decompiles the APK, injects a splash screen, rebuilds, and signs it.
+
+on:
+  workflow_dispatch:
+    inputs:
+      apk_file:
+        description: "د APK فایل نوم (APK file name)"
+        required: true
+        default: "MT Manager_2.14.5-clone.apk"
+      splash_text:
+        description: "د اسپلش متن (Splash text)"
+        required: true
+        default: "MT Manager"
+      delay_ms:
+        description: "د اسپلش وخت په ملي‌ثانیه (Splash duration in ms)"
+        required: true
+        default: "2000"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Apktool
+        run: |
+          set -euo pipefail
+          APKTOOL_VERSION="2.10.0"
+          sudo curl -fsSL \
+            "https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool" \
+            -o /usr/local/bin/apktool
+          sudo curl -fsSL \
+            "https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar" \
+            -o /usr/local/bin/apktool.jar
+          sudo chmod +x /usr/local/bin/apktool /usr/local/bin/apktool.jar
+          apktool --version
+
+      - name: Locate Android build-tools (zipalign / apksigner)
+        id: sdk
+        run: |
+          set -euo pipefail
+          BT_DIR="$(ls -d "$ANDROID_SDK_ROOT"/build-tools/* | sort -V | tail -1)"
+          echo "Using build-tools: $BT_DIR"
+          echo "buildtools=$BT_DIR" >> "$GITHUB_OUTPUT"
+
+      - name: Decompile APK
+        run: |
+          set -euo pipefail
+          rm -rf decompiled_app
+          apktool d -f -o decompiled_app "${{ github.event.inputs.apk_file }}"
+
+      - name: Inject splash screen
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/add_splash.py \
+            decompiled_app \
+            "${{ github.event.inputs.splash_text }}" \
+            "${{ github.event.inputs.delay_ms }}"
+
+      - name: Rebuild APK
+        run: |
+          set -euo pipefail
+          apktool b decompiled_app -o app-unsigned.apk
+          ls -lh app-unsigned.apk
+
+      - name: Zipalign
+        run: |
+          set -euo pipefail
+          "${{ steps.sdk.outputs.buildtools }}/zipalign" -p -f 4 app-unsigned.apk app-aligned.apk
+
+      - name: Generate a signing key
+        run: |
+          set -euo pipefail
+          # د ازموینې کلید (debug key). تاسو کولی شئ وروسته یې په خپل کلید بیا لاسلیک کړئ.
+          keytool -genkeypair -v \
+            -keystore build.keystore \
+            -alias buildkey \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=App Decompiler, OU=Dev, O=Local, L=NA, S=NA, C=NA"
+
+      - name: Sign APK
+        run: |
+          set -euo pipefail
+          "${{ steps.sdk.outputs.buildtools }}/apksigner" sign \
+            --ks build.keystore \
+            --ks-key-alias buildkey \
+            --ks-pass pass:android \
+            --key-pass pass:android \
+            --out app-signed.apk \
+            app-aligned.apk
+          "${{ steps.sdk.outputs.buildtools }}/apksigner" verify --verbose app-signed.apk
+
+      - name: Upload signed APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-with-splash-signed
+          path: app-signed.apk
+          retention-days: 14
+
+      - name: Upload unsigned APK (to sign with your own key)
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-with-splash-unsigned-aligned
+          path: app-aligned.apk
+          retention-days: 14
+
+      - name: Upload modified sources
+        uses: actions/upload-artifact@v4
+        with:
+          name: decompiled_app-with-splash
+          path: decompiled_app/
+          retention-days: 14
