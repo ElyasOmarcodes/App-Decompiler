@@ -4,6 +4,13 @@ name: Build APK with Splash Screen
 # Decompiles the APK, injects a splash screen, rebuilds, and signs it.
 
 on:
+  # د دې branch په هر push سره پخپله چلیږي (ترڅو APK ترلاسه شي)
+  push:
+    branches:
+      - claude/apk-decompile-commands-api9ul
+    paths:
+      - ".github/workflows/build-with-splash.yml"
+      - ".github/scripts/add_splash.py"
   workflow_dispatch:
     inputs:
       apk_file:
@@ -24,6 +31,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    env:
+      APK_FILE: ${{ github.event.inputs.apk_file || 'MT Manager_2.14.5-clone.apk' }}
+      SPLASH_TEXT: ${{ github.event.inputs.splash_text || 'MT Manager' }}
+      DELAY_MS: ${{ github.event.inputs.delay_ms || '2000' }}
 
     steps:
       - name: Checkout repository
@@ -60,15 +71,15 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf decompiled_app
-          apktool d -f -o decompiled_app "${{ github.event.inputs.apk_file }}"
+          apktool d -f -o decompiled_app "$APK_FILE"
 
       - name: Inject splash screen
         run: |
           set -euo pipefail
           python3 .github/scripts/add_splash.py \
             decompiled_app \
-            "${{ github.event.inputs.splash_text }}" \
-            "${{ github.event.inputs.delay_ms }}"
+            "$SPLASH_TEXT" \
+            "$DELAY_MS"
 
       - name: Rebuild APK
         run: |
