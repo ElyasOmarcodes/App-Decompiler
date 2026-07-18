@@ -1,0 +1,107 @@
+name: Decompile APK
+
+# دا workflow د APK فایل ډیکامپایل کوي او پایله بیرته ریپو ته کمیټ کوي
+# This workflow decompiles the APK using Apktool and commits the result back.
+
+on:
+  # لاسي (manual) چلولو لپاره د GitHub د "Actions" ټب څخه
+  workflow_dispatch:
+    inputs:
+      apk_file:
+        description: "د APK فایل نوم (APK file name)"
+        required: true
+        default: "MT Manager_2.14.5-clone.apk"
+      output_dir:
+        description: "د پایلې فولډر (Output folder)"
+        required: true
+        default: "decompiled_app"
+
+jobs:
+  decompile:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # اجازه چې پایله بیرته ریپو ته کمیټ شي
+
+    steps:
+      # ۱) ریپو راکش (checkout)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ۲) د Java نصبول (Apktool د Java غوښتنه کوي)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      # ۳) د Apktool ډاونلوډ او نصبول (وروستی نسخه)
+      - name: Download and install Apktool
+        run: |
+          set -euo pipefail
+          APKTOOL_VERSION="2.10.0"
+          echo "Downloading Apktool v${APKTOOL_VERSION} ..."
+          sudo curl -fsSL \
+            "https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool" \
+            -o /usr/local/bin/apktool
+          sudo curl -fsSL \
+            "https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar" \
+            -o /usr/local/bin/apktool.jar
+          sudo chmod +x /usr/local/bin/apktool /usr/local/bin/apktool.jar
+          apktool --version
+
+      # ۴) د APK ډیکامپایل کول په decompiled_app فولډر کې
+      - name: Decompile APK
+        run: |
+          set -euo pipefail
+          APK="${{ github.event.inputs.apk_file }}"
+          OUT="${{ github.event.inputs.output_dir }}"
+          echo "Decompiling: $APK  ->  $OUT"
+          rm -rf "$OUT"
+          # -f = د پخوانۍ پایلې لغوه کول، -o = د پایلې فولډر
+          apktool d -f -o "$OUT" "$APK"
+          echo "Decompilation finished."
+
+      # ۵) د مهمو فایلونو ځای ښودل (Smali + Manifest)
+      - name: Show important file locations
+        run: |
+          set -euo pipefail
+          OUT="${{ github.event.inputs.output_dir }}"
+          echo "=================================================="
+          echo " د ډیکامپایل شوي اپلیکیشن مهم ځایونه"
+          echo " Key locations of the decompiled app"
+          echo "=================================================="
+          echo ""
+          echo ">> AndroidManifest.xml (مانیفیسټ فایل):"
+          echo "   $OUT/AndroidManifest.xml"
+          echo ""
+          echo ">> Smali کوډونه (Smali code folders):"
+          find "$OUT" -maxdepth 1 -type d -name "smali*" -print | sed 's/^/   /'
+          echo ""
+          echo ">> د Smali فایلونو شمیر (number of .smali files):"
+          find "$OUT" -type f -name "*.smali" | wc -l
+          echo ""
+          echo ">> د سرچینو فولډر (resources): $OUT/res"
+          echo "=================================================="
+
+      # ۶) پایله د artifact په توګه اپلوډ کول (د ډاونلوډ لپاره)
+      - name: Upload decompiled output as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.inputs.output_dir }}
+          path: ${{ github.event.inputs.output_dir }}/
+          retention-days: 14
+
+      # ۷) پایله بیرته ریپو ته کمیټ کول (ترڅو په GitHub کې یې ایډیټ کړئ)
+      - name: Commit decompiled output back to the repository
+        run: |
+          set -euo pipefail
+          OUT="${{ github.event.inputs.output_dir }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "$OUT"
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Add decompiled output in ${OUT}/ (Apktool)"
+            git push
+          fi
