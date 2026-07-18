@@ -83,6 +83,24 @@ jobs:
             "$SPLASH_TEXT" \
             "$DELAY_MS"
 
+      - name: Sanitize unresolvable framework color references
+        run: |
+          set -euo pipefail
+          # د نسخې-قید شویو colors.xml (values-v31/v34...) کې د Material You
+          # (@android:color/system_* او نور) حوالې چې د apktool زوړ framework
+          # private ګڼي، په یو literal رنګ بدلوو ترڅو aapt یې بیا کمپایل کړي.
+          # دا یوازې د نوي Android داینامیک تیمینګ اغیزمنوي (cosmetic).
+          shopt -s nullglob
+          changed=0
+          for f in decompiled_app/res/values-v*/colors.xml; do
+            if grep -qE '@android:color/' "$f"; then
+              sed -i -E 's|@android:color/[A-Za-z0-9_]+|#ff888888|g' "$f"
+              echo "sanitized: $f"
+              changed=1
+            fi
+          done
+          [ "$changed" -eq 1 ] || echo "no framework color refs to sanitize"
+
       - name: Rebuild APK
         run: |
           set -euo pipefail
