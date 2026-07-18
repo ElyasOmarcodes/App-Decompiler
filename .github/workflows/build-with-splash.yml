@@ -49,7 +49,9 @@ jobs:
       - name: Install Apktool
         run: |
           set -euo pipefail
-          APKTOOL_VERSION="2.10.0"
+          # 2.7.0 د زاړه aapt1 (default) کاروي — دا اپ resource obfuscation لري
+          # (APKTOOL_DUPLICATE نومونه) چې aapt2 یې نه مني ("Expected a reference").
+          APKTOOL_VERSION="2.7.0"
           sudo curl -fsSL \
             "https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool" \
             -o /usr/local/bin/apktool
