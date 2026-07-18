@@ -34,7 +34,24 @@ A simple setup to decompile APK files using **Apktool** via **GitHub Actions**.
 
 > د اسپلش کوډ په `.github/scripts/add_splash.py` کې دی. دا سکریپټ پخپله د اپ
 > package او اصلي (launcher) activity کشف کوي، بیا یو `SplashActivity` جوړوي
-> چې څو ثانیې ښکاري او بیا اصلي اپ پرانیزي.
+> چې څو ثانیې ښکاري او بیا اصلي اپ پرانیزي. دا اپ د آیکون-سویچر لپاره درې
+> `activity-alias` لري؛ سکریپټ د هغوی `targetActivity` بیا Splash ته وراړوي،
+> نو د آیکون-سویچر فیچر خوندي پاتې کیږي.
+
+### ⚙️ د دې اپ لپاره ځانګړي تنظیمات (build notes)
+
+دا اپ (`bin.mt.plus.canary`, "MT_Protector") **resource obfuscation** لري، نو
+د بیا-کمپایل لپاره دوه شیان اړین وو:
+
+1. **Apktool 2.7.0** (نه 2.10) — ځکه 2.10 د aapt2 کاروي چې د دې اپ د
+   `APKTOOL_DUPLICATE` فایل-حوالو بڼه نه مني ("Expected a reference"). 2.7.0
+   د زاړه aapt1 کاروي چې دا بڼه مني.
+2. **د رنګ sanitize** — د `values-v31/v34/colors.xml` کې د Material You
+   (`@android:color/system_*`) private حوالې په literal رنګ بدلیږي، ځکه د
+   apktool زوړ framework یې private ګڼي. دا یوازې د Android 12+ داینامیک
+   تیمینګ اغیزمنوي (cosmetic).
+
+> ✅ دا workflow ازمویل شوی او بریالی دی — لاسلیک شوی APK یې تولید کړ.
 
 **په خپل کلید بیا لاسلیک (sign with your own key):**
 ```bash
